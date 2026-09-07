@@ -32,6 +32,7 @@ npm run dev     # server de dezvoltare -> http://localhost:5173
 npm run build   # build de producție în /dist
 npm run preview # verifică build-ul de producție local
 npm run assets  # regenerează pozele optimizate + imaginea de preview
+npm run domain -- https://exemplu.ro   # schimbă domeniul peste tot
 ```
 
 Node.js 18+ recomandat.
@@ -49,7 +50,8 @@ Node.js 18+ recomandat.
 │   └── cristian-gilca.png
 ├── scripts/
 │   ├── optimize-images.mjs    # assets-src/ -> public/, WebP redimensionat
-│   └── generate-og.mjs        # generează public/og-image.jpg (1200×630)
+│   ├── generate-og.mjs        # generează public/og-image.jpg (1200×630)
+│   └── set-domain.mjs         # schimbă domeniul în index.html, robots.txt, sitemap.xml
 ├── public/                    # ce ajunge ca atare pe site
 │   ├── cristian-gilca.webp    # poza optimizată (generată)
 │   ├── og-image.jpg           # preview pentru WhatsApp / Facebook (generat)
@@ -117,8 +119,8 @@ din `data.js` — numărul se schimbă într-un singur loc.
 
 ## Înainte de lansare
 
-- [ ] Înlocuiește `https://cristian-gilca.ro` cu domeniul real în: `index.html` (canonical,
-      `og:url`, `og:image`, `twitter:image`, JSON-LD), `public/robots.txt`, `public/sitemap.xml`
+- [x] Domeniul e setat (`https://mentenanta-cristian-gilca.vercel.app`). Dacă iei unul propriu:
+      `npm run domain -- https://domeniul-nou.ro`, apoi commit — atât.
 - [ ] Înlocuiește textul provizoriu din `aboutParagraphs`
 - [ ] Completează `aboutStats` cu cifre reale (acum lista e goală, deci secțiunea nu apare)
 - [ ] Confirmă sau șterge `anre`

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cristian-gilca.ro/sitemap.xml
+Sitemap: https://mentenanta-cristian-gilca.vercel.app/sitemap.xml
