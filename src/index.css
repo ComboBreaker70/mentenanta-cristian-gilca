@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 font-sans text-slate-300 antialiased;
+    margin: 0;
+    min-width: 320px;
+    /* Plasă de siguranță pentru haloul din Hero, care depășește viewport-ul. */
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Ancorele din meniu nu mai intră sub header-ul fix. */
+  section[id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  /* Contur vizibil la navigarea cu tastatura, invizibil la click cu mouse-ul. */
+  :focus-visible {
+    outline: 2px solid theme('colors.volt.300');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgba(84, 216, 255, 0.28);
+    color: #eaf9ff;
+  }
+
+  /* Scrollbar discret, în tonul temei */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #04070f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #16293d;
+    border-radius: 999px;
+    border: 2px solid #04070f;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e4560;
+  }
+}
+
+@layer components {
+  /* Sticlă — baza cardurilor */
+  .glass {
+    @apply relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] backdrop-blur-xl;
+  }
+
+  /* Ridicare discretă la hover, fără efecte care distrag */
+  .card-lift {
+    @apply transition duration-300 hover:-translate-y-0.5 hover:border-white/[0.18] hover:bg-white/[0.05];
+  }
+
+  .text-gradient-volt {
+    @apply bg-gradient-to-r from-volt-200 to-volt-400 bg-clip-text text-transparent;
+  }
+
+  /* Grilă tehnică estompată spre margini */
+  .grid-mask {
+    @apply bg-grid-fine;
+    -webkit-mask-image: radial-gradient(70% 60% at 50% 30%, #000 0%, transparent 100%);
+    mask-image: radial-gradient(70% 60% at 50% 30%, #000 0%, transparent 100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
