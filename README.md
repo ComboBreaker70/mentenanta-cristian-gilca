@@ -107,6 +107,27 @@ Node.js 18+ recomandat.
 Meniul de desktop, meniul mobil, subsolul și evidențierea paginii curente se actualizează
 singure din `navLinks`.
 
+### Fotografia de profil
+
+1. Pune poza în `assets-src/`
+2. Trece numele fișierului în `PROFILE.file` din `scripts/optimize-images.mjs`
+3. Rulează `npm run assets`
+
+Scriptul o decupează la 4:5 și o convertește în WebP, apoi regenerează imaginea de preview
+(`og-image.jpg`). O poză mai mică de 760×950 nu se mărește, ca să nu iasă neclară, deci
+dimensiunile rezultate depind de sursă. Dacă se schimbă, actualizează și `PROFILE_PHOTO_SIZE`
+din `data.js` (scriptul le afișează la final). Dacă fișierul lipsește, rama afișează un
+placeholder, deci pagina nu se strică.
+
+### Autorizarea ANRE
+
+În `data.js`, `anre` e `null`, iar secțiunea **nu se afișează deloc**, ca să nu apară pe site o
+afirmație neconfirmată. Când autorizarea e confirmată:
+
+```js
+export const anre = { grade: 'IIIB' }
+```
+
 ---
 
 ## Contact
