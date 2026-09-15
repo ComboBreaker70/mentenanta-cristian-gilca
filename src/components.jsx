@@ -173,7 +173,7 @@ export function ProfileFrame() {
                   <User size={34} strokeWidth={1.6} aria-hidden="true" />
                 </span>
                 <p className="font-display text-lg font-semibold text-white">Fotografie de profil</p>
-                <p className="text-sm text-slate-400">assets-src/cristian-gilca.png</p>
+                <p className="text-sm text-slate-400">assets-src/cristian_gilca_2.png</p>
               </div>
             </div>
           )}

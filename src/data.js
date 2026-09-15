@@ -25,7 +25,7 @@ export const TEL_URL = `tel:${PHONE_TEL}`
 
 export const PROFILE_PHOTO = '/cristian-gilca.webp'
 /** Dimensiunile reale ale fișierului — previn saltul de layout la încărcare. */
-export const PROFILE_PHOTO_SIZE = { width: 760, height: 950 }
+export const PROFILE_PHOTO_SIZE = { width: 388, height: 485 }
 
 /* -------------------------------------------------------------------------- */
 /*  Meniu                                                                     */

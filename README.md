@@ -47,7 +47,7 @@ Node.js 18+ recomandat.
 ├── tailwind.config.js         # design system: culori, fonturi, umbre, animații
 ├── ROADMAP.md                 # planul de lucru pe etape
 ├── assets-src/                # imaginile SURSĂ, la rezoluție mare (nu se publică)
-│   └── cristian-gilca.png
+│   └── cristian_gilca_2.png
 ├── scripts/
 │   ├── optimize-images.mjs    # assets-src/ -> public/, WebP redimensionat
 │   ├── generate-og.mjs        # generează public/og-image.jpg (1200×630)
@@ -125,7 +125,7 @@ din `data.js` — numărul se schimbă într-un singur loc.
 - [ ] Completează `aboutStats` cu cifre reale (acum lista e goală, deci secțiunea nu apare)
 - [ ] Confirmă sau șterge `anre`
 - [ ] Completează programul de lucru în JSON-LD (`openingHoursSpecification`)
-- [ ] Poză reală la lucru în `assets-src/`, apoi `npm run assets`
+- [x] Poză nouă de profil (`cristian_gilca_2.png`). Are doar 485×485 px, deci o variantă la rezoluție mai mare ar ieși mai clară pe ecranele retina
 
 ---
 
