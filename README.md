@@ -140,8 +140,8 @@ din `data.js` — numărul se schimbă într-un singur loc.
 
 ## Înainte de lansare
 
-- [x] Domeniul e setat (`https://mentenanta-cristian-gilca.vercel.app`). Dacă iei unul propriu:
-      `npm run domain -- https://domeniul-nou.ro`, apoi commit — atât.
+- [x] Domeniul e setat: `https://www.men-tenant-a.ro` (`men-tenant-a.ro` face redirect 308 către `www`).
+      Dacă se schimbă: `npm run domain -- https://<domeniul-nou>`, apoi commit — atât.
 - [ ] Înlocuiește textul provizoriu din `aboutParagraphs`
 - [ ] Completează `aboutStats` cu cifre reale (acum lista e goală, deci secțiunea nu apare)
 - [ ] Confirmă sau șterge `anre`
